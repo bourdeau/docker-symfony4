@@ -18,20 +18,18 @@ git clone https://github.com/bourdeau/docker-symfony4.git && cd docker-symfony4
 vim .env
 # Edit SYMFONY_PATH to set your Symfony path app
 
-docker-compose up
-# Check everything is okay
-# If so take down and up
-docker-compose down
 docker-compose up -d
 ```
+You are done
 
-Put your Symfony 4 application in /app
+## Set up your Symfony4 application
 
-In your .env set 'mysql' for the host
-
-Ex: DATABASE_URL=mysql://root:yourpassword@mysql:3306/symfony
-
-Then: http://localhost:8080
+```bash
+# The path you defined above in .env
+cd $SYMFONY_PATH
+vim .env
+# Set DATABASE_URL to mysql://symfony:symfonypass@mysql:3306/symfony
+```
 
 ## Bug
 - Apache doesn't start properly...
