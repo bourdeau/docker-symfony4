@@ -1,12 +1,17 @@
 Docker Symfony 4
 ==================
 
-# Install Docker
+## Install Docker
+
+See doc: https://docs.docker.com/engine/installation/linux/docker-ce/ubuntu/
+
 ```bash
 sudo usermod -aG docker ${USER}
-#Restart pc
+sudo reboot
 ```
-# Install containers
+
+## Install containers
+
 ```bash
 docker-compose up
 # Check everything is okay
@@ -19,42 +24,41 @@ docker-compose up -d
 # Ex: DATABASE_URL=mysql://root:yourpassword@mysql:3306/symfony
 ```
 
+## Memo
 
-# Memo
-
-## Build project
+Build project:
 ```bash
 docker-compose up -d
 ```
 
-## List container
+List container:
 ```bash
 docker-compose ps
 ```
 
-## Take down container and remove
+Take down container and remove:
 ```bash
 docker-compose down --volumes
 
 docker-compose down --remove-orphans
 ```
 
-## List images
+List images:
 ```bash
 docker images
 ```
 
-## Delete image
+Delete image:
 ```bash
 docker rmi --force <ID_IMAGE>
 ```
 
-## Connect SSH to container
+Connect SSH to container:
 ```bash
 docker exec -t -i <ID_CONTAINER> bash
 ```
 
-## Show volumes
+Show volumes:
 ```bash
 docker volume ls
 ```
