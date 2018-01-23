@@ -1,0 +1,37 @@
+version: "2"
+
+services:
+   db:
+     image: mysql:5.7
+     container_name: mysql
+     volumes:
+       - db_data:/var/lib/mysql
+     restart: always
+     environment:
+       MYSQL_ROOT_PASSWORD: h1n1h5n1SB
+       MYSQL_DATABASE: symfony
+       MYSQL_USER: root
+       MYSQL_PASSWORD: h1n1h5n1SB
+     ports:
+         - "3307:3306"
+     expose:
+         - "3306"
+
+   apache:
+     build: apache
+     container_name: apache
+     ports:
+       - "8080:80"
+     expose:
+         - "80"
+     restart: always
+     volumes:
+         - .:/var/www
+     # https://stackoverflow.com/questions/37100358/docker-composer-exited-with-code-0
+     tty: true
+    #  depends_on:
+    #      - db
+
+
+volumes:
+    db_data:
