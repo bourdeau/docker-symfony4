@@ -8,10 +8,10 @@ services:
        - db_data:/var/lib/mysql
      restart: always
      environment:
-       MYSQL_ROOT_PASSWORD: h1n1h5n1SB
+       MYSQL_ROOT_PASSWORD: rootpass
        MYSQL_DATABASE: symfony
-       MYSQL_USER: root
-       MYSQL_PASSWORD: h1n1h5n1SB
+       MYSQL_USER: symfony
+       MYSQL_PASSWORD: symfonypass
      ports:
          - "3307:3306"
      expose:

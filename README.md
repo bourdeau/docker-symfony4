@@ -10,9 +10,11 @@ sudo usermod -aG docker ${USER}
 sudo reboot
 ```
 
-## Install containers
+## Install docker-symfony4 & containers
 
 ```bash
+git clone https://github.com/bourdeau/docker-symfony4.git && cd docker-symfony4
+
 docker-compose up
 # Check everything is okay
 # If so take down and up
@@ -24,41 +26,10 @@ docker-compose up -d
 # Ex: DATABASE_URL=mysql://root:yourpassword@mysql:3306/symfony
 ```
 
-## Memo
+## Bug
+- Apache doesn't start properly...
 
-Build project:
 ```bash
-docker-compose up -d
-```
-
-List container:
-```bash
-docker-compose ps
-```
-
-Take down container and remove:
-```bash
-docker-compose down --volumes
-
-docker-compose down --remove-orphans
-```
-
-List images:
-```bash
-docker images
-```
-
-Delete image:
-```bash
-docker rmi --force <ID_IMAGE>
-```
-
-Connect SSH to container:
-```bash
-docker exec -t -i <ID_CONTAINER> bash
-```
-
-Show volumes:
-```bash
-docker volume ls
+docker exec -t -i <ID_CONTAINER_APACHE> bash
+service apache2 restart
 ```
