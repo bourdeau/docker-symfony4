@@ -26,7 +26,7 @@ services:
          - "80"
      restart: always
      volumes:
-         - .:/var/www
+         - ${SYMFONY_PATH}:/var/www/app
      # https://stackoverflow.com/questions/37100358/docker-composer-exited-with-code-0
      tty: true
     #  depends_on:

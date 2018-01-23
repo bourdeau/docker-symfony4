@@ -15,6 +15,9 @@ sudo reboot
 ```bash
 git clone https://github.com/bourdeau/docker-symfony4.git && cd docker-symfony4
 
+vim .env
+# Edit SYMFONY_PATH to set your Symfony path app
+
 docker-compose up
 # Check everything is okay
 # If so take down and up
@@ -34,6 +37,6 @@ Then: http://localhost:8080
 - Apache doesn't start properly...
 
 ```bash
-docker exec -t -i <ID_CONTAINER_APACHE> bash
-service apache2 restart
+docker exec -it apache bash
+service apache2 start
 ```
