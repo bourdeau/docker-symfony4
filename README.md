@@ -23,7 +23,9 @@ docker-compose up -d
 ```
 
 Put your Symfony 4 application in /app
+
 In your .env set 'mysql' for the host
+
 Ex: DATABASE_URL=mysql://root:yourpassword@mysql:3306/symfony
 
 Then: http://localhost:8080
