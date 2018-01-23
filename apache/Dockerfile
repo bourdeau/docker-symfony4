@@ -41,9 +41,8 @@ RUN a2enmod rewrite
 WORKDIR /var/www/app
 
 RUN usermod -u 1000 www-data
-# RUN chown -R www-data:www-data /var/www/app/var/cache
-# RUN chown -R www-data:www-data /var/www/app/var/logs
 
+/usr/sbin/apache2
 EXPOSE 80
 
 ENV DEBIAN_FRONTEND teletype
