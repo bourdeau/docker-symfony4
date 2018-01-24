@@ -20,7 +20,6 @@ vim .env
 
 docker-compose up -d
 ```
-You are done
 
 ## Set up your Symfony4 application
 
@@ -30,6 +29,7 @@ cd $SYMFONY_PATH
 vim .env
 # Set DATABASE_URL to mysql://symfony:symfonypass@mysql:3306/symfony
 ```
+You are done !
 
 ## Bug
 - Apache doesn't start properly...

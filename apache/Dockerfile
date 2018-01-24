@@ -1,4 +1,7 @@
 FROM ubuntu:17.10
+
+MAINTAINER Pierre-Henri Bourdeau
+
 ENV DEBIAN_FRONTEND=noninteractive
 
 RUN apt-get update
@@ -42,7 +45,6 @@ WORKDIR /var/www/app
 
 RUN usermod -u 1000 www-data
 
-/usr/sbin/apache2
 EXPOSE 80
 
 ENV DEBIAN_FRONTEND teletype
