@@ -16,7 +16,7 @@ sudo reboot
 git clone https://github.com/bourdeau/docker-symfony4.git && cd docker-symfony4
 
 vim .env
-# Edit SYMFONY_PATH to set your Symfony path app
+# Edit env variables to match your application
 
 docker-compose up -d
 ```
@@ -27,14 +27,6 @@ docker-compose up -d
 # The path you defined above in .env
 cd $SYMFONY_PATH
 vim .env
-# Set DATABASE_URL to mysql://symfony:symfonypass@mysql:3306/symfony
+# Set DATABASE_URL with the env variable you defined above
 ```
 You are done !
-
-## Bug
-- Apache doesn't start properly...
-
-```bash
-docker exec -it apache bash
-service apache2 start
-```
