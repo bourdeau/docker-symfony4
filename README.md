@@ -29,4 +29,17 @@ cd $SYMFONY_PATH
 vim .env
 # Set DATABASE_URL with the env variable you defined above
 ```
-You are done !
+
+You are done!
+
+Visit: http://localhost:8080
+
+
+## Connect to a container
+
+```bash
+docker exec -it <CONTAINER_NAME> bash
+
+# Composer is intalled in the apache container so you can:
+cd /var/www/app && composer install --prefer-dist
+```
