@@ -2,9 +2,9 @@ version: "2"
 
 services:
 
-   apache:
+   symfony:
      build: php-7.2 # You can also use ubuntu-17.10
-     container_name: apache
+     container_name: symfony
      ports:
        - "8080:80"
      expose:
