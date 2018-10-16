@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "573e88af63328d959e3505e19fac191d",
+    "content-hash": "7f2fe416585da69f33585cf77fddbf8d",
     "packages": [
         {
             "name": "doctrine/annotations",
@@ -2085,6 +2085,28 @@
             "time": "2018-09-11T07:13:26+00:00"
         },
         {
+            "name": "symfony/apache-pack",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/apache-pack.git",
+                "reference": "3aa5818d73ad2551281fc58a75afd9ca82622e6c"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symfony/apache-pack/zipball/3aa5818d73ad2551281fc58a75afd9ca82622e6c",
+                "reference": "3aa5818d73ad2551281fc58a75afd9ca82622e6c",
+                "shasum": ""
+            },
+            "type": "symfony-pack",
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "description": "A pack for Apache support in Symfony",
+            "time": "2017-12-12T01:46:35+00:00"
+        },
+        {
             "name": "symfony/asset",
             "version": "dev-master",
             "source": {
@@ -2631,6 +2653,63 @@
             "description": "Symfony Doctrine Bridge",
             "homepage": "https://symfony.com",
             "time": "2018-10-12T12:56:18+00:00"
+        },
+        {
+            "name": "symfony/dotenv",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/dotenv.git",
+                "reference": "bd5c9158e4162bbd35a482bba4c29f40581607fa"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symfony/dotenv/zipball/bd5c9158e4162bbd35a482bba4c29f40581607fa",
+                "reference": "bd5c9158e4162bbd35a482bba4c29f40581607fa",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^7.1.3"
+            },
+            "require-dev": {
+                "symfony/process": "~3.4|~4.0"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "4.2-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Symfony\\Component\\Dotenv\\": ""
+                },
+                "exclude-from-classmap": [
+                    "/Tests/"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Fabien Potencier",
+                    "email": "fabien@symfony.com"
+                },
+                {
+                    "name": "Symfony Community",
+                    "homepage": "https://symfony.com/contributors"
+                }
+            ],
+            "description": "Registers environment variables from a .env file",
+            "homepage": "https://symfony.com",
+            "keywords": [
+                "dotenv",
+                "env",
+                "environment"
+            ],
+            "time": "2018-10-12T12:57:08+00:00"
         },
         {
             "name": "symfony/event-dispatcher",
@@ -5526,63 +5605,6 @@
             "time": "2018-10-02T12:43:31+00:00"
         },
         {
-            "name": "symfony/dotenv",
-            "version": "dev-master",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/symfony/dotenv.git",
-                "reference": "bd5c9158e4162bbd35a482bba4c29f40581607fa"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/symfony/dotenv/zipball/bd5c9158e4162bbd35a482bba4c29f40581607fa",
-                "reference": "bd5c9158e4162bbd35a482bba4c29f40581607fa",
-                "shasum": ""
-            },
-            "require": {
-                "php": "^7.1.3"
-            },
-            "require-dev": {
-                "symfony/process": "~3.4|~4.0"
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "4.2-dev"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "Symfony\\Component\\Dotenv\\": ""
-                },
-                "exclude-from-classmap": [
-                    "/Tests/"
-                ]
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Fabien Potencier",
-                    "email": "fabien@symfony.com"
-                },
-                {
-                    "name": "Symfony Community",
-                    "homepage": "https://symfony.com/contributors"
-                }
-            ],
-            "description": "Registers environment variables from a .env file",
-            "homepage": "https://symfony.com",
-            "keywords": [
-                "dotenv",
-                "env",
-                "environment"
-            ],
-            "time": "2018-10-12T12:57:08+00:00"
-        },
-        {
             "name": "symfony/maker-bundle",
             "version": "v1.8.0",
             "source": {
@@ -5956,12 +5978,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/web-profiler-bundle.git",
-                "reference": "30676375c3b79a9481e5c43ec40b9fb96d981cd3"
+                "reference": "2e5f3810af52acd56dc07f7b76b9b5ed0bf91df2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/web-profiler-bundle/zipball/30676375c3b79a9481e5c43ec40b9fb96d981cd3",
-                "reference": "30676375c3b79a9481e5c43ec40b9fb96d981cd3",
+                "url": "https://api.github.com/repos/symfony/web-profiler-bundle/zipball/2e5f3810af52acd56dc07f7b76b9b5ed0bf91df2",
+                "reference": "2e5f3810af52acd56dc07f7b76b9b5ed0bf91df2",
                 "shasum": ""
             },
             "require": {
@@ -6013,7 +6035,7 @@
             ],
             "description": "Symfony WebProfilerBundle",
             "homepage": "https://symfony.com",
-            "time": "2018-10-10T12:43:48+00:00"
+            "time": "2018-10-15T15:39:36+00:00"
         },
         {
             "name": "symfony/web-server-bundle",
@@ -6077,7 +6099,9 @@
     ],
     "aliases": [],
     "minimum-stability": "dev",
-    "stability-flags": [],
+    "stability-flags": {
+        "symfony/apache-pack": 20
+    },
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {

@@ -2,7 +2,7 @@
 namespace App\Controller;
 
 use Symfony\Component\HttpFoundation\Response;
-use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
+use Symfony\Component\Routing\Annotation\Route;
 
 class DefaultController
 {
@@ -12,7 +12,7 @@ class DefaultController
     public function indexAction()
     {
         return new Response(
-            '<html><body>Hello Kong!</body></html>'
+            '<html><body>Welcome to Symfony</body></html>'
         );
     }
 }

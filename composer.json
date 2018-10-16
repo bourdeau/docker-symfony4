@@ -9,8 +9,10 @@
         "ext-ctype": "*",
         "ext-iconv": "*",
         "sensio/framework-extra-bundle": "^5.1",
+        "symfony/apache-pack": "dev-master",
         "symfony/asset": "*",
         "symfony/console": "*",
+        "symfony/dotenv": "*",
         "symfony/expression-language": "*",
         "symfony/flex": "^1.1",
         "symfony/form": "*",
@@ -29,7 +31,6 @@
     },
     "require-dev": {
         "symfony/debug-pack": "*",
-        "symfony/dotenv": "*",
         "symfony/maker-bundle": "^1.0",
         "symfony/profiler-pack": "*",
         "symfony/test-pack": "*",

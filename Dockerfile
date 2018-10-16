@@ -24,7 +24,7 @@ RUN rm -rf /var/www/*
 
 # Conf Apache2
 RUN mkdir /var/www/app
-# RUN echo "ServerName localhost" >> /etc/apache2/apache2.conf
+RUN echo "ServerName localhost" >> /etc/apache2/apache2.conf
 COPY php-7.2/app.conf /etc/apache2/sites-available/app.conf
 RUN usermod -u 1000 www-data
 RUN a2ensite app.conf
@@ -49,5 +49,6 @@ RUN set -eux; \
 	composer run-script --no-dev post-install-cmd; \
 	chmod +x bin/console; sync
 
+VOLUME /var/www/app/vendor
 
 EXPOSE 80
