@@ -1,21 +1,22 @@
-version: "2"
+version: "3.4"
 
 services:
 
    symfony:
-     build: php-7.2 # You can also use ubuntu-17.10
+     build: .
      container_name: symfony
+     restart: always
+     volumes:
+         - ${SYMFONY_PATH}:/var/www/app
+     tty: true
+     depends_on:
+         - db
+     env_file:
+         - ./.env
      ports:
        - "8080:80"
      expose:
          - "80"
-     restart: always
-     volumes:
-         - ${SYMFONY_PATH}:/var/www/app
-     # https://stackoverflow.com/questions/37100358/docker-composer-exited-with-code-0
-     tty: true
-     depends_on:
-         - db
 
    db:
      image: mysql:5.7
