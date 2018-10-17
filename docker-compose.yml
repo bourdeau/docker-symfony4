@@ -14,9 +14,7 @@ services:
      env_file:
          - ./.env
      ports:
-       - "8080:80"
-     expose:
-         - "80"
+         - "8080:80"
 
    db:
      image: mysql:5.7
@@ -31,8 +29,6 @@ services:
        MYSQL_PASSWORD: ${SYMFONY_DB_PATH}
      ports:
          - "3307:3306"
-     expose:
-         - "3306"
 
 volumes:
     db_data:

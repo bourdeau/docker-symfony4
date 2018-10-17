@@ -43,3 +43,27 @@ docker exec -it <CONTAINER_NAME> bash
 # Composer is intalled in the apache container so you can:
 cd /var/www/app && composer install --prefer-dist
 ```
+
+## Deploy to Heroku
+
+```bash
+# Create the app
+heroku create bourdeau-symfony
+
+# Push the app
+heroku container:push symfony --app bourdeau-symfony
+
+# Add a dyno
+heroku ps:scale symfony=1
+
+heroku container:release symfony
+heroku open --app bourdeau-symfony
+
+heroku logs --tail
+
+# List dyno
+
+heroku ps
+# Restart a dyno
+heroku restart symfony.1
+```

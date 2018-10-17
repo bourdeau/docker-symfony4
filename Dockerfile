@@ -15,7 +15,7 @@ COPY --from=composer:latest /usr/bin/composer /usr/bin/composer
 
 # Bashrc
 RUN rm /root/.bashrc
-COPY php-7.2/.bashrc /root/.bashrc
+COPY docker/.bashrc /root/.bashrc
 
 # Cleaning
 RUN rm -rf /etc/apache2/sites-available/* && rm -rf /etc/apache2/sites-enabled/*
@@ -25,7 +25,7 @@ RUN rm -rf /var/www/*
 # Conf Apache2
 RUN mkdir /var/www/app
 RUN echo "ServerName localhost" >> /etc/apache2/apache2.conf
-COPY php-7.2/app.conf /etc/apache2/sites-available/app.conf
+COPY docker/app.conf /etc/apache2/sites-available/app.conf
 RUN usermod -u 1000 www-data
 RUN a2ensite app.conf
 RUN service apache2 restart
@@ -39,4 +39,6 @@ RUN composer install --prefer-dist --no-progress --no-suggest
 
 VOLUME /var/www/app/vendor
 
-EXPOSE 80
+# EXPOSE 80
+
+CMD ["/usr/sbin/apache2ctl", "-D", "FOREGROUND"]
