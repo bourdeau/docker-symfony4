@@ -5,7 +5,6 @@ services:
    symfony:
      build: .
      container_name: symfony
-     restart: always
      volumes:
          - ${SYMFONY_PATH}:/var/www/app
      tty: true
@@ -21,7 +20,6 @@ services:
      container_name: mysql
      volumes:
        - db_data:/var/lib/mysql
-     restart: always
      environment:
        MYSQL_ROOT_PASSWORD: ${DB_ROOT_PASS}
        MYSQL_DATABASE: ${SYMFONY_DB_NAME}

@@ -12,7 +12,7 @@ class DefaultController
     public function indexAction()
     {
         return new Response(
-            '<html><body>Welcome to Symfony</body></html>'
+            '<html><body>Welcome to Me</body></html>'
         );
     }
 }
